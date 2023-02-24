@@ -1,0 +1,188 @@
+*{
+  margin: 0;
+  padding: 0;                        /*  (--*--) serve para resertar a pagina */
+  box-sizing: border-box;            /*Se você definir a largura de um elemento como 100 pixels, esses 100 pixels incluirão qualquer borda ou preenchimento adicionado e a caixa de conteúdo diminuirá para absorver essa largura*/   
+  font-family: 'arial', sans-serif;
+  list-style: none;                  /* para tira os pontos da (--ul--) de itens*/
+  text-decoration: none;             /*para decora a linha de um texo*/
+}
+
+section{
+  position: relative;
+  width: 100%;                     /*largura*/
+  min-height: 100vh;               /*altura e largura da tela*/
+  display: flex;                   /* podemos manipular todos os elementos filhos desse flex container com propriedades*/
+  align-items: center;             /*controla o alinhamento de itens no Eixo Cruzado*/
+  justify-content: center;         /*  Define o alinhamneto do item tanto na vertifacal como na horizaontal */
+}
+
+/*Cabeçalho*/
+
+section header{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /*vai envia o item para a estremidade direita da pagina*/
+}
+
+/* Lista não ordenada*/
+
+section header ul{
+  display: flex; /*deixa a lista em linha*/
+  align-items: center; /*centralisa do eixo horizontal*/
+  justify-content: center; /*centralisa do eixo vertical*/
+  gap: 20px; /*Serve para deixar os itens afastados*/
+}
+
+/* intens dentro da lista */
+
+section header ul li a{
+  font-size: 13px; /*tamanho dos links*/
+  color: #111;
+}
+
+/*Alteraponteiro do mouse quando passar nos links*/
+
+section header ul li a:hover{
+  text-decoration: underline; /* sublinha*/
+}
+
+/*button login*/
+
+section header ul button{
+  padding: 8px 14px;
+  border-radius: 3px; /*arrendonda as borda dos buttom e box*/
+  background: #1a73e8;
+  border: 0;
+  outline: none;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /*Efeito de transição com um início e fim lentos*/
+}
+
+/* Start buttom lodin e altera a cor*/
+section header ul button:hover{ 
+  background: #3284ee;
+}
+
+/*--Main do logo--*/
+
+.main{   
+  display: flex;
+  align-items: center;
+  flex-direction: column; /*colocar em coluna*/
+  width: 580px;
+  margin-bottom: 200px;
+}
+
+/*--Main da caixa pesquisa--*/
+
+.main .searchBox{
+position: relative;
+width: 100%;
+margin-top: 20px;
+}
+
+/*--Main pesquisa--*/
+
+.main .searchBox .search{
+width: 100%;
+padding: 12px;
+padding-left: 45px;
+padding-right: 60px;
+border-radius: 30px;
+font-size: 16px;
+border: 1px solid #ccc;
+}
+
+/*Borda do pesquisa*/
+
+.main .searchBox .search:hover{
+border: 1px solid transparent;
+box-shadow: 0px 1px 10px #ccc; /*Efeito de sambra*/
+}
+
+.main .searchBox .icons{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /*Deixa os itens na mesma direção sendo um na esquerda e outro na direta*/
+  padding: 12px 20px;
+  pointer-events: none;
+} 
+
+.main .button{
+  margin-top: 30px;
+}
+
+.main .button .btn{
+  margin: 0 5px;
+  padding: 15px 20px;
+  color: #555;
+  font-size: 13px;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.main .button .btn:hover{
+  border: 1px solid #ccc;
+}
+
+.main .texto{
+  margin-top: 30px;
+  font-size: 12px;
+}
+
+.main .texto a{
+  color: #1a0dab;
+}
+
+.main .texto a:hover{
+  text-decoration: underline;
+}
+
+/*Footer ou Rodapé*/
+
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #f2f2f2;
+  width: 100%;
+  color: #555;
+}
+
+footer .line{
+  padding: 15px 25px;
+  border: 1px solid rgb(0,0,0,0.05); 
+}
+
+footer .line_top{
+  font-size: 14px;
+}
+ footer .line.line2{
+  display: flex;
+  justify-content: space-between;
+ }
+
+ footer .line.line2 ul{
+  display: flex;
+ }
+
+ footer .line.line2 ul li a{
+  font-size: 14px;
+  color: #5f6368;
+  margin-right: 25px;
+ }
+
+ footer .line.line2 ul li a:hover{
+  text-decoration: underline;
+ }
